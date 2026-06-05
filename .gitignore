@@ -1,0 +1,52 @@
+# ---------------------------------------------------------------------------
+# LearningTracks — multi-stack repo (Angular / .NET / Go / Rust)
+# ---------------------------------------------------------------------------
+
+# ---- OS ----
+.DS_Store
+Thumbs.db
+
+# ---- Editors / IDEs ----
+.idea/
+.vscode/
+*.swp
+*~
+
+# ---- Node / Angular ----
+node_modules/
+dist/
+.angular/
+*.tsbuildinfo
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.env
+.env.*
+!.env.example
+
+# ---- .NET (Dotnet/ and DSA/) ----
+bin/
+obj/
+*.user
+*.suo
+.vs/
+[Dd]ebug/
+[Rr]elease/
+TestResults/
+*.nupkg
+
+# ---- Go ----
+# compiled binaries have no fixed extension; ignore the ones built here by name
+*.exe
+*.test
+*.out
+**/go-wc/go-wc
+vendor/
+
+# ---- Rust ----
+target/
+**/*.rs.bk
+Cargo.lock.orig
+
+# ---- Tooling / local config ----
+**/.claude/settings.local.json

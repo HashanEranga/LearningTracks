@@ -1,0 +1,14 @@
+<p>Feature toggles works</p>
+<button (click)='showAdvanced.set(!showAdvanced())'>Toggle button</button>
+
+@if(showAdvanced()){
+    <p>Advanced Settings</p>
+}
+
+@defer(on viewport){
+    <app-heavy-panel/>
+} @placeholder {
+    <p>Scroll down to load the analytics panel ...</p>
+} @loading {
+    <p>Loading ...</p>
+}
