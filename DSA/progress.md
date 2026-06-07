@@ -16,7 +16,7 @@ DSA runs as a **steady concurrent 5th track** alongside .NET / Angular / Go+Rust
 - **Flip condition:** a hard interview date → compress by jumping to target-company tagged sets + the relevant pattern phases.
 
 ## Phase checklist
-- [~] Phase 0 — C# toolkit / stdlib — `Snippets.cs` built + runs green (12 sections, .NET 9). Remaining to close: reproduce heap/freq-map/grid-neighbors from memory + solve LC 347.
+- [~] Phase 0 — C# toolkit / stdlib — `Snippets.cs` built + runs green (12 sections, .NET 9). Confident on sections 1–3 (`ListBasics`, `DictAndSet`, `OrderedStructures`). Remaining to close: sections 4–12 + reproduce heap/freq-map/grid-neighbors from memory + solve LC 347.
 - [ ] Phase 1 — Arrays, strings, two-pointer, sliding window, prefix sums
 - [ ] Phase 2 — Linked lists, stacks, queues, monotonic stack
 - [ ] Phase 3 — Trees, BST, recursion
@@ -34,3 +34,5 @@ DSA runs as a **steady concurrent 5th track** alongside .NET / Angular / Go+Rust
 |------|-------|-----------------|-------|
 | 2026-06-05 | 0 | — | Plan created |
 | 2026-06-05 | 0 | — | `phase00-toolkit/Snippets.cs` built (.NET 9), runs green. Key gotchas drilled: max-heap via negate/comparer + no decrease-key, `b.CompareTo(a)` not `b-a`, `int` overflow, `int[][]` vs `int[,]`, LinkedList-as-deque. Next: reproduce-from-memory + LC 347 to close Phase 0. |
+| 2026-06-07 | 0 | — | Confident on `Snippets.cs` sections 1–3 (List basics, Dictionary/HashSet, ordered structures). Next: sections 4–12 (heaps onward). |
+| 2026-06-07 | 0 | — | Week wrapped. Phase 0 still open. Carryover: sections 4–12 confidence (start §4 Heaps), reproduce heap/freq-map/grid-neighbors from memory, solve LC 347. |
