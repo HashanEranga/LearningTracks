@@ -1,5 +1,7 @@
 use std::sync::{Arc, Mutex};
 use std::thread;
+mod test_drop;
+mod multi_worker;
 
 fn main() {
     let counter = Arc::new(Mutex::new(0));
@@ -17,4 +19,7 @@ fn main() {
 
     handle.join().unwrap();
     println!("count {}", counter.lock().unwrap());
+
+    test_drop::test_drop();
+    multi_worker::multi_worker();
 }
