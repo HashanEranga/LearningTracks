@@ -18,7 +18,7 @@ pub(crate) fn conditions(){
     } else {
         println!("D");
     }
-    
+
     println!("match conditioning");
     match grade {
         75..=100 => println!("A"),
@@ -27,4 +27,27 @@ pub(crate) fn conditions(){
         35..=49 => println!("D"),
         _ => println!("E"),
     }
+
+    // creating a conditional type
+    let marks = 56;
+
+    let rank = {
+        if marks > 50 {
+            'A'
+        } else {
+            'F'
+        }
+    };
+    println!("{} -> {}", marks, rank);
+
+    let score = 67;
+    
+    let position = {
+        match score {
+            00..=50 => 'B',
+            51..100 => 'A',
+            _ => 'F',
+        }
+    };
+    println!("{} -> {}", score, position);
 }
