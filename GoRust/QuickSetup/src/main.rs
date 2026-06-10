@@ -1,7 +1,7 @@
 use crate::functions_session::basic_math;
-
 mod compound_types;
 mod functions_session;
+mod conditions;
 
 fn main() {
     println!("Hello, world!");
@@ -25,4 +25,7 @@ fn main() {
     };
 
     println!("{full_name}");
+    
+    println!("conditions check");
+    conditions::conditions();
 }

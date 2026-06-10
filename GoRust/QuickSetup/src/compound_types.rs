@@ -1,12 +1,13 @@
 pub(crate) fn compound_types(){
     let fixed_str = "fixed length string";
+    println!("{}", fixed_str);
     let mut variable_string = String::from("variable length string");
     println!("Before string : {}", variable_string);
     variable_string.push('s');
     println!("After string : {}", variable_string);
     
     // arrays
-    let mut num_array = [10, 20, 30, 40, 50];
+    let num_array = [10, 20, 30, 40, 50];
     println!("values of array : {:?}", num_array);
     
     let zero_array = [0; 10];
@@ -26,4 +27,6 @@ pub(crate) fn compound_types(){
     
     // empty tuple - return implicitly , zero size do not contain any memory
     let unit = ();
+    
+    println!("Unit : {:?}", unit);
 }
