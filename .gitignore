@@ -50,3 +50,4 @@ Cargo.lock.orig
 
 # ---- Tooling / local config ----
 **/.claude/settings.local.json
+graphify-out/
