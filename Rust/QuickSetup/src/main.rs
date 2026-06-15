@@ -3,6 +3,7 @@ mod borrowing;
 mod compound_types;
 mod conditions;
 mod functions_session;
+mod lifetimes;
 mod loops;
 mod ownership;
 
@@ -65,4 +66,8 @@ fn main() {
     // borrowing
     println!("Borrowing");
     borrowing::borrowing();
+
+    // lifetimes
+    println!("Lifetimes");
+    lifetimes::lifetimes();
 }

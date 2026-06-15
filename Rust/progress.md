@@ -23,9 +23,9 @@ Net: Phase 0 is largely warm; the gap is **lifetimes, traits/generics depth, ite
 ## Phase 0 — Language Re-Cement (Weeks 1–2) · Jun 15 → Jun 28
 
 ### Week 1 — Ownership/lifetimes deep
-- [~] Ownership/borrowing/moves deeply, **lifetimes** (`'a`, elision, structs holding refs), slices, `String` vs `&str` *(ownership/borrowing/moves already solid from rust-wc + QuickSetup; the new work is explicit lifetimes)*
-- [ ] Self-check: one-paragraph move-vs-borrow-vs-clone explainer; a fn returning a `&str` into its input compiles
-- **Hours**: __ / ~7 · **Evidence**: · **Confusion**:
+- [~] Ownership/borrowing/moves deeply, **lifetimes** (`'a`, elision, structs holding refs), slices, `String` vs `&str` *(ownership/borrowing/moves already solid from rust-wc + QuickSetup; the new work is explicit lifetimes)* — **fn lifetimes done**: `first_word` (elision, no `'a`) + `longest` (explicit `'a`). **Pending → struct-held lifetime `Excerpt<'a>` (Exercise 3, parked as a TODO in `lifetimes.rs`).**
+- [~] Self-check: one-paragraph move-vs-borrow-vs-clone explainer *(verbal version given — GC vs no-GC, "a reference must not outlive the data it borrows from"; still to write up as a paragraph)*; a fn returning a `&str` into its input compiles — **✅ `first_word`**
+- **Hours**: ~1 / ~7 · **Evidence**: `QuickSetup/src/lifetimes.rs` — `first_word` + `longest`; `cargo run` prints expected output, `cargo clippy` 0 warnings · **Confusion**: lifetimes' abstract framing was unclear at first — cleared via book/bookmark analogy + the no-GC bridge (compiler must *prove* a ref doesn't outlive its data); next friction point likely struct-held lifetimes
 
 ### Week 2 — Traits, generics, iterators
 - [ ] **traits** + bounds + `dyn` vs generics, `enum`/exhaustive `match`, `Result`/`Option`/`?`, **iterators & closures** (`Fn`/`FnMut`/`FnOnce`), `Box`/`Rc`/`Arc`/`RefCell`/`Cell`
@@ -193,3 +193,4 @@ Net: Phase 0 is largely warm; the gap is **lifetimes, traits/generics depth, ite
 | Date | Phase/Wk | Hours | Notes |
 |---|---|---|---|
 | 2026-06-14 | — | — | Restructured repo to Rust-only; new plan + tracker created. Multi-track state archived at git tag `archive/all-tracks-2026-06-14`. |
+| 2026-06-15 | P0 W1 | ~1 | Lifetimes Day 1: `first_word` (elision, no `'a`) + `longest` (explicit `'a`) — both run, clippy clean. Internalized last-expression returns & byte compare. `Excerpt<'a>` (struct holding a ref) parked as a TODO in `lifetimes.rs` for next session. |
