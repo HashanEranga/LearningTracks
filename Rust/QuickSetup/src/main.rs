@@ -6,6 +6,7 @@ mod functions_session;
 mod lifetimes;
 mod loops;
 mod ownership;
+mod traits_generics;
 
 fn main() {
     println!("Hello, world!");
@@ -70,4 +71,8 @@ fn main() {
     // lifetimes
     println!("Lifetimes");
     lifetimes::lifetimes();
+
+    // traits & generics (Week 2 — Cluster 1)
+    println!("Traits & Generics");
+    traits_generics::traits_generics();
 }
