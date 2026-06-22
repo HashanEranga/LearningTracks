@@ -11,7 +11,7 @@
 // dropped before the borrow's last use.
 
 struct Excerpt<'a> {
-    part: &'a str
+    part: &'a str,
 }
 
 pub(crate) fn lifetimes() {
@@ -24,7 +24,9 @@ pub(crate) fn lifetimes() {
 
     let novel = "Call me Ishamael. Some years ago.";
     let first_sentence = novel.split('.').next().expect("no sentence found");
-    let excerpt = Excerpt { part : first_sentence};
+    let excerpt = Excerpt {
+        part: first_sentence,
+    };
 
     println!("excerpt : {}", excerpt.part);
     // Task 3 (dangling Excerpt) verified to FAIL with E0597 on 2026-06-18, then removed.
@@ -44,25 +46,28 @@ pub(crate) fn lifetimes() {
     let s = String::from("Hashan");
     // let t = s;            // MOVE — would make `s` unusable below (ownership error)
     // println!("{s}");
-    
+
     // fix 1 - clone the value - make an explicit copy (new heap allocation)
     println!("Fix 1 - clone the value");
     let cloned_s = s.clone();
-    
+
     println!("{} {}", s, cloned_s);
-    
+
     // fix 2 use a reference - borrow instead of moving (zero alloc; `s` stays usable)
     println!("Fix 2 - use a reference");
     let t = &s;
     println!("{} - {}", s, t);
-    
+
     // fix 3 Derive Copy - trivial stack types (no heap/Drop): assignment copies, original stays valid
     println!("Fix 3 - Derive a copy");
     #[derive(Copy, Clone)]
-    struct Point { x: i32, y: i32 }
+    struct Point {
+        x: i32,
+        y: i32,
+    }
 
-    let p1 = Point { x: 1, y: 2};
-    let p2 = p1; 
+    let p1 = Point { x: 1, y: 2 };
+    let p2 = p1;
 
     println!("Point 1 X value : {}, Y value : {}", p1.x, p1.y);
     println!("Point 2 X value : {}, Y value : {}", p2.x, p2.y);
@@ -82,11 +87,7 @@ fn first_word(s: &str) -> &str {
 // Ex 2 — two input refs, output could borrow from either -> compiler can't infer,
 // so we declare a shared lifetime 'a (result valid for the *shorter* of a and b).
 fn longest<'a>(a: &'a str, b: &'a str) -> &'a str {
-    if a.len() > b.len() {
-        a
-    } else {
-        b
-    }
+    if a.len() > b.len() { a } else { b }
 }
 
 // ─────────────────────────────────────────────────────────────────────────────

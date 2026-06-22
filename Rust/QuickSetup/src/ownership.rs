@@ -1,4 +1,4 @@
-pub(crate) fn ownership(){
+pub(crate) fn ownership() {
     // ownership basics
     // 1 Each value has a variable that's its "owner"
     // 2 A value can only have one owner at a time
@@ -11,7 +11,7 @@ pub(crate) fn ownership(){
     println!("s2 is {s2}");
 
     // functions that take ownership
-    let sample_vec = vec![1,2,3,4,5];
+    let sample_vec = vec![1, 2, 3, 4, 5];
     take_ownership(sample_vec);
     // println!("vector elements in main {:?}", sample_vec);
 
@@ -22,18 +22,18 @@ pub(crate) fn ownership(){
     println!("sample vec three elements are {:?}", sample_vec_three);
 }
 
-fn take_ownership(vec: Vec<i32>){
+fn take_ownership(vec: Vec<i32>) {
     println!("vector elements in the method {:?}", vec);
 }
 
-fn gives_ownership() -> Vec<i32>{
+fn gives_ownership() -> Vec<i32> {
     let mut sample_vec = Vec::new();
     sample_vec.push(1);
     sample_vec.push(2);
     sample_vec
 }
 
-fn takes_and_gives_ownership(mut sample_vec: Vec<i32>) -> Vec<i32>{
+fn takes_and_gives_ownership(mut sample_vec: Vec<i32>) -> Vec<i32> {
     sample_vec.push(5);
     sample_vec
 }

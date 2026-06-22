@@ -1,4 +1,4 @@
-pub(crate) fn conditions(){
+pub(crate) fn conditions() {
     let grade = 56;
 
     println!("if else conditions");
@@ -31,17 +31,11 @@ pub(crate) fn conditions(){
     // creating a conditional type
     let marks = 56;
 
-    let rank = {
-        if marks > 50 {
-            'A'
-        } else {
-            'F'
-        }
-    };
+    let rank = { if marks > 50 { 'A' } else { 'F' } };
     println!("{} -> {}", marks, rank);
 
     let score = 67;
-    
+
     let position = {
         match score {
             00..=50 => 'B',
