@@ -18,9 +18,11 @@ Pure-Rust explanations — no cross-language analogies.
 | 06 | [Borrowing & references](./06-borrowing-and-references.md) | `QuickSetup/src/borrowing.rs` | ✅ |
 | 07 | [Lifetimes](./07-lifetimes.md) | `QuickSetup/src/lifetimes.rs` | ✅ |
 | 08 | [Traits & generics](./08-traits-and-generics.md) | `QuickSetup/src/traits_generics.rs` | ✅ |
+| 09 | [Enums & pattern matching](./09-enums-and-pattern-matching.md) | `QuickSetup/src/enums_match.rs` | ✅ |
+| 10 | [Option, Result & `?`](./10-option-result-and-the-question-mark.md) | `QuickSetup/src/option_result.rs` | ✅ |
 
 ## Up next (Week 2 remaining)
-`enum` + exhaustive `match` → `Option`/`Result`/`?` → iterators & closures (`Fn`/`FnMut`/`FnOnce`)
-→ `Box`/`Rc`/`Arc`/`RefCell`/`Cell` → **Project 0: generic `LRU<K, V>` cache**.
+iterators & closures (`Fn`/`FnMut`/`FnOnce`) → `Box`/`Rc`/`Arc`/`RefCell`/`Cell`
+→ **Project 0: generic `LRU<K, V>` cache**.
 
 New notes get added here as each concept is covered.

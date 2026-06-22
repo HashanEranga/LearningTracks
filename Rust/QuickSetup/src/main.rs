@@ -2,9 +2,11 @@ use crate::functions_session::basic_math;
 mod borrowing;
 mod compound_types;
 mod conditions;
+mod enums_match;
 mod functions_session;
 mod lifetimes;
 mod loops;
+mod option_result;
 mod ownership;
 mod traits_generics;
 
@@ -75,4 +77,12 @@ fn main() {
     // traits & generics (Week 2 — Cluster 1)
     println!("Traits & Generics");
     traits_generics::traits_generics();
+
+    // enums & exhaustive match (Week 2 — Cluster 2)
+    println!("Enums & Match");
+    enums_match::enums_match();
+
+    // Option / Result / ? (Week 2 — Cluster 3)
+    println!("Option / Result / ?");
+    option_result::option_result();
 }
